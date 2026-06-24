@@ -1,6 +1,6 @@
 #include "../inc/Serializer.hpp"
 #include <iostream>
-#include <cstdint>
+
 int main()
 {
     Data a;
@@ -9,8 +9,18 @@ int main()
 
     Data *ptr = &a;
     uintptr_t rawPtr = Serializer::serialize(ptr);
-    std::cout << rawPtr << std::endl;
     Data *newPtr = Serializer::deserialize(rawPtr);
-    std::cout << newPtr << std::endl;
+
+    std::cout << "Ponteiro Original: " << ptr << std::endl;
+    std::cout << "Valor Inteiro:     " << rawPtr << std::endl;
+    std::cout << "Novo Ponteiro:     " << newPtr << std::endl;
+
+    
+    if (newPtr == ptr) {
+        std::cout << "Sucesso: Os ponteiros são idênticos!" << std::endl;
+    } else {
+        std::cout << "Erro: Os ponteiros são diferentes!" << std::endl;
+    }
+
     return (0);
 }

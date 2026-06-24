@@ -10,11 +10,8 @@ Serializer::Serializer(const Serializer &copy)
 }
 Serializer& Serializer::operator=(const Serializer &other)
 {
-   if(this != &other)
-   {
-        *this = other;
-   }
-   return (*this);
+    (void) other;
+    return (*this);
 }
 Serializer::~Serializer()
 {
