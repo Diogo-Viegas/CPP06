@@ -11,15 +11,15 @@ int main()
     uintptr_t rawPtr = Serializer::serialize(ptr);
     Data *newPtr = Serializer::deserialize(rawPtr);
 
-    std::cout << "Ponteiro Original: " << ptr << std::endl;
-    std::cout << "Valor Inteiro:     " << rawPtr << std::endl;
-    std::cout << "Novo Ponteiro:     " << newPtr << std::endl;
+    std::cout << "Original Pointer: " << ptr << std::endl;
+    std::cout << "Int Value:     " << rawPtr << std::endl;
+    std::cout << "New Pointer:     " << newPtr << std::endl;
 
     
     if (newPtr == ptr) {
-        std::cout << "Sucesso: Os ponteiros são idênticos!" << std::endl;
+        std::cout << "Success" << std::endl;
     } else {
-        std::cout << "Erro: Os ponteiros são diferentes!" << std::endl;
+        std::cout << "Error" << std::endl;
     }
 
     return (0);
