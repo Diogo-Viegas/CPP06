@@ -54,9 +54,9 @@ void ScalarConverter::convert(const std::string &literal)
     char *endstr;
     double value = std::strtod(literal.c_str(), &endstr);
 
-    if(endstr == literal)
+    if(endstr == literal.c_str())
     {
-      
+      std::cout << "char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible" << std::endl;
     }
     if(*endstr != '\0')
     {
